@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin:1% 2%; height:500px">
+            <!-- <div class="cold-md-2" id="left_warning_symbols" style="border: 2px solid gray">
+                <p>dscdcdc</p>
+            </div> -->
+            <div class="cold-md-8" id="middle">
+                <div id="car_dashboard" style="border: 5px solid red;background-color: black;">
+                    <div style="padding-left: 300px;">
+                        <i id="left_signal" class="material-icons"
+                            style="width: 60px;font-size:60px;background-color: black;color:white; border-radius: 5px;">arrow_backward</i>
+                        <i id="right_signal" class="material-icons"
+                            style="font-size:60px;background-color: black;color:white; border-radius: 5px;">arrow_forward</i>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+                                <img src="images\Door_Opened.JPG" style="top:200px; left: 500px;" />
+                                <img src="images\Battery_Low.JPG" />
+                                <img src="images\Engine_oil.JPG" />
+                                <img src="images\fuel_indication.JPG" />
+                                <img src="images\Seat_Bealt_Warning.JPG" />
+                            </div>
+                            <img src="images/Tacho_meter.jpg" style="width: 300px;height: 300px; margin-left: 30px;">
+                            <img src="images/speedo_meter_old.png"
+                                style="width: 300px;height: 300px; margin-left: 50px;">
+                        </div>
+                        <div id="tacho-meter-needle" class="tacho-meter-needle">
+                        </div>
+                        <div id="speedo-meter-needle" class="speedo-meter-needle">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="cold-md-2" id="right_warning_symbols" style="border: 2px solid green">
+                </div> -->
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <div id="button_controls">
+                        <button id="accelerate" class="btn btn-primary control"
+                            onclick="accelerateClicked()">Accelerate</button>
+                        <button id="break" class="btn btn-warning control" onclick="breakClicked()">Break</button>
+                        <button id="stop" class="btn btn-danger control" onclick="stopCar()">stop car</button>
+                        <br>
+                        <button id="move_left" class="btn btn-primary control">Move left</button>
+                        <button id="stop_move_left" class="btn btn-danger control"> Stop move left</button>
+                        <br>
+                        <button id="move_right" class="btn btn-primary control">Move right</button>
+                        <button id="stop_move_right" class="btn btn-danger control"> Stop move right</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
