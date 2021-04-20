@@ -15,56 +15,133 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row" style="margin:1% 2%; height:500px">
-            <!-- <div class="cold-md-2" id="left_warning_symbols" style="border: 2px solid gray">
-                <p>dscdcdc</p>
-            </div> -->
-            <div class="cold-md-8" id="middle">
-                <div id="car_dashboard" style="border: 5px solid red;background-color: black;">
-                    <div style="padding-left: 300px;">
-                        <i id="left_signal" class="material-icons"
-                            style="width: 60px;font-size:60px;background-color: black;color:white; border-radius: 5px;">arrow_backward</i>
-                        <i id="right_signal" class="material-icons"
-                            style="font-size:60px;background-color: black;color:white; border-radius: 5px;">arrow_forward</i>
-                    </div>
-                    <div>
-                        <div>
-                            <div>
-                                <img src="images\Door_Opened.JPG" style="top:200px; left: 500px;" />
-                                <img src="images\Battery_Low.JPG" />
-                                <img src="images\Engine_oil.JPG" />
-                                <img src="images\fuel_indication.JPG" />
-                                <img src="images\Seat_Bealt_Warning.JPG" />
-                            </div>
-                            <img src="images/Tacho_meter.jpg" style="width: 300px;height: 300px; margin-left: 30px;">
-                            <img src="images/speedo_meter_old.png"
-                                style="width: 300px;height: 300px; margin-left: 50px;">
-                        </div>
-                        <div id="tacho-meter-needle" class="tacho-meter-needle">
-                        </div>
-                        <div id="speedo-meter-needle" class="speedo-meter-needle">
-                        </div>
-                    </div>
+    <div class="container"
+        style=" width: 80%; margin-top: 5%; border: 5px solid gray;background-color: black; border-radius: 20px;"> -->
+        <div class="row">
+
+            <div class="col-md-7">
+                <div style="padding-left: 65%;">
+                    <i id="left_signal" class="material-icons"
+                        style="width: 60px;font-size:60px;background-color: black;color:white; border-radius: 5px;">arrow_backward</i>
+                    <i id="right_signal" class="material-icons"
+                        style="padding-left: 20%;font-size:60px;background-color: black;color:white; border-radius: 5px;">arrow_forward</i>
                 </div>
-                <!-- <div class="cold-md-2" id="right_warning_symbols" style="border: 2px solid green">
-                </div> -->
             </div>
-            <div class="row">
-                <div class="col-md-5">
-                    <div id="button_controls">
-                        <button id="accelerate" class="btn btn-primary control"
-                            onclick="accelerateClicked()">Accelerate</button>
-                        <button id="break" class="btn btn-warning control" onclick="breakClicked()">Break</button>
-                        <button id="stop" class="btn btn-danger control" onclick="stopCar()">stop car</button>
-                        <br>
-                        <button id="move_left" class="btn btn-primary control">Move left</button>
-                        <button id="stop_move_left" class="btn btn-danger control"> Stop move left</button>
-                        <br>
-                        <button id="move_right" class="btn btn-primary control">Move right</button>
-                        <button id="stop_move_right" class="btn btn-danger control"> Stop move right</button>
+            <div class="col-md-1">
+                <img src="images/fuel_indication.JPG" style="margin-left:80%" />
+            </div>
+            <div class="col-md-2" style="margin-left: 1%;margin-top:1%;">
+                <div class="progress">
+                    <div id="fuel_percentage" class="progress-bar" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                        70%
                     </div>
                 </div>
+            </div>
+            <!-- <div class="col-md-3 pull-right" style="padding-left: 10%;">
+               
+            </div> -->
+
+        </div>
+        <div class="row">
+            <div class="col-md-1 pull-left" id="left_warning_symbols">
+                <div style="padding-left: 103%;">
+                    <img id="batter_low_img" src="images/dummy_image.JPG" />
+                </div>
+                <div style="padding-left: 80%;">
+                    <img id="engine_temp_img" src="images/dummy_image.JPG" />
+                </div>
+                <div style="padding-left: 60%">
+                    <img id="oil_warning_img" src="images/dummy_image.JPG" />
+                </div>
+                <div style="padding-left: 120%;">
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="images/Tacho_meter.jpg" style="width: 300px;height: 300px; border-radius: 103px;">
+
+                <div id="tacho_meter_zero"
+                    style="font-size: 20px; position:fixed;top:338px;left:285px;font-family: sans-serif;color: white;">
+                    <span>0</span>
+                </div>
+
+                <div id="tacho-meter-needle" class="tacho-meter-needle">
+                </div>
+            </div>
+            <div class="col-md-2" style="font-size: 16px;margin-left: 3%; color: white;">
+                <div style="padding-left: 11%;">
+                    <p id="Date_and_time">April 18, 08:12 PM</p>
+                    <p id = "current_temp" style="padding-left: 40%;font:28px">63 <sup>°</sup>F</p>
+                </div>
+                <div style="margin-top: 150%;">
+                    <p id="total_travelled" style="padding-left:6%;font-size: 28px;">0 Miles</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img src="images/speedo_meter_old.png" style="width: 300px;height: 300px;">
+                    <div id="speedo_meter_zero"
+                        style="position:fixed;top:352px; left:770px;font-family: sans-serif;color: white;font-size:20px">
+                        <span>0</span>
+                    </div>
+                    <div id="speedo-meter-needle" class="speedo-meter-needle">
+                    </div>
+                    <div style="position: fixed;left:860px;top:220px;font-family: sans-serif;color: white;">
+                        <span>MPH</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-1 pull-left" id="right_warning_symbols">
+                <div style="margin-left: 8%;">
+                    <img id = "door_opened_img" src="images/Door_Opened.JPG" />
+                    <!-- <img src="images/car_frontdoor_warning.jpg" />
+                    <img src="images/car_trunk_warning.jpg" /> -->
+                </div>
+                <div style="margin-left: 50%;">
+                    <img id="seat_belt_img" src="images/Seat_Bealt_Warning.JPG" />
+                </div>
+                <div style="margin-left: 60%;">
+                    <img id="warning_alert_img" src="images/danger_light.jpg" />
+                </div>
+                <div style="margin-left: 48%;">
+                    <img id="cruise_control_img" src="images/Cruise_Control.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- <img src="images/test_img.jpg" /> -->
+        <div class="row" >
+            <div class="col-md-2" style="margin-left: 10%;">
+                <button id="accelerate" class="btn btn-primary control" onclick="accelerateCar()">Accelerate</button>
+                <button id="break" class="btn btn-warning control" onclick="breakClicked()">Break</button>
+                <button id="stop_car" class="btn btn-danger control" onclick="stopCar()">stop car</button>
+                <button id="cruise_control" class="btn btn-primary control" onclick=cruiseControl()>Cruise
+                    Control</button>
+            </div>
+            <div class="col-md-4">
+                <button id="move_left" class="btn btn-primary control">Move left</button>
+                <button id="stop_move_left" class="btn btn-danger control"> Stop move left</button>
+                <br>
+                <button id="move_right" class="btn btn-primary control">Move right</button>
+                <button id="stop_move_right" class="btn btn-danger control"> Stop move right</button>
+                <br>
+                <button id="add_fuel" class="btn btn-primary control" onclick=addFuel()>Add Fuel</button>
+                <button id="remove_fuel" class="btn btn-danger control" onclick=removeFuel()>Remove fuel</button>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary control" onclick="batterLow()">Batter Low</button>
+                <button class="btn btn-primary control" onclick="engineTemp()">Engine Heated</button>
+                <button class="btn btn-primary control" onclick="oilLeak()">Oil Leak</button>
+            </div>
+            <div class="col-md-2">
+                <button id="door_opened" class="btn btn-primary control" onclick=doorOpened()>Open Door</button>
+                <!-- <button id="close_door" class="btn btn-primary control" onclick=closeDoor()>Close Door</button> -->
+                <button id="seat_belt" class="btn btn-primary control" onclick=seatBelt()>seat belt</button>
+                <button id="alert" class="btn btn-primary control" onclick=warningAlert()>Alert</button>
             </div>
         </div>
     </div>

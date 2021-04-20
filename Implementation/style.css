@@ -1,3 +1,4 @@
+
 .tacho-meter-needle{
     width: 5px;
     height: 120px;
@@ -7,11 +8,11 @@
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     display: inline-block;
-    left: 206px;
+    left: 60%;
     position: absolute;
-    top: 120px;
+    top: 12%;
     
-    transform:rotate(48.45rad);
+    transform:rotate(48.34rad);
     transform-origin:bottom;
 }
 
@@ -24,22 +25,23 @@
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
   display: inline-block;
-  left: 570px;
+  left: 61%;
   position: absolute;
-  top: 120px;
+  top: 12%;
   
-  transform:rotate(79.65rad);
+  transform:rotate(79.610rad);
   transform-origin:bottom;
 }
 
 img{
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
 }
 
 .control{
 margin: 5px 5px 5px 5px;
 width: 120px;
+/* border-radius: 3px; */
 }
 /************************************************************************************************8*/
 .grid-stack { background: #FAFAD2; }
